@@ -1,8 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import About from "./views/About.vue";
-
+import AppMarket from "./views/AppMarket.vue";//应用市场
+import DataPlat from "./views/DataPlat.vue";//数据平台
 Vue.use(Router);
 
 export default new Router({
@@ -13,9 +13,14 @@ export default new Router({
       component: Home
     },
     {
-      path: "/about",
-      name: "about",
-      component: About
+      path: "/app",
+      name: "app",
+      component: AppMarket
+    },
+    {
+      path: "/data",
+      name: "data",
+      component: DataPlat
     }
   ]
 });

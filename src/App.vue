@@ -14,6 +14,7 @@
       </nav>
     </div>
     <router-view></router-view>
+    <footer>© 2015-2017 Wuhan Sibe. All rights reserved.</footer>
   </div>
 </template>
 <script>
@@ -23,8 +24,8 @@
       return{
         array:[
           {name:'首页',url:'/'},
-          {name:'应用市场',url:'/'},
-          {name:'数据平台',url:'/'},
+          {name:'应用市场',url:'/app'},
+          {name:'数据平台',url:'/data'},
           {name:'安全中心',url:'/'},
           {name:'物联中心',url:'/'},
           {name:'创客中心',url:'/'},
@@ -105,5 +106,14 @@
     .active{
       background: #006DA4;
     }
+  }
+  footer{
+    background: #BFBDBF;
+    width: 100%;
+    height: 68px;
+    line-height: 68px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
   }
 </style>
