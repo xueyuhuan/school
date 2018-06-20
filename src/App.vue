@@ -26,8 +26,8 @@
           {name:'首页',url:'/'},
           {name:'应用市场',url:'/app'},
           {name:'数据平台',url:'/data'},
-          {name:'安全中心',url:'/'},
-          {name:'物联中心',url:'/'},
+          {name:'安全中心',url:'/safety'},
+          {name:'物联中心',url:'/logistics'},
           {name:'创客中心',url:'/'},
         ],
         active:0
