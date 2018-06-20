@@ -11,19 +11,11 @@
     </card>
     <div class="table">
       <ul class="nav">
-        <li><a><i class="fa fa-windows"></i>基础数据</a></li>
-        <li><a><i class="fa fa-windows"></i>教学数据</a></li>
-        <li><a><i class="fa fa-windows"></i>资产数据</a></li>
-        <li><a><i class="fa fa-windows"></i>校友数据</a></li>
+        <li v-for="(item,index) in dataType" @click.stop="toggle(index)"><router-link ref="btn" :class="{active:index == current_index}" :to="item.route"><i class="fa fa-windows"></i>{{item.name}}</router-link></li>
       </ul>
-      <card>
-        <h4 slot="header">学生数据</h4>
-        <select>
-          <option value="高一年级">高一年级</option>
-          <option value="高二年级">高二年级</option>
-          <option value="高三年级">高三年级</option>
-        </select>
-      </card>
+      <div class="card">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -34,6 +26,23 @@ export default {
   name: "DataPlat",
   components:{
     card
+  },
+  data(){
+    return{
+      dataType:[
+        {name:"基础数据",route:"/data/basicData"},
+        {name:"教学数据",route:"/data/TeachingData"},
+        {name:"资产数据",route:"/data/assetsData"},
+        {name:"校友数据",route:"/data/matesData"}
+      ],
+      current_index:0
+    }
+  },
+  methods:{
+    toggle(index){
+      console.log(index);
+      this.current_index = index;
+    }
   }
 };
 </script>
@@ -45,6 +54,10 @@ export default {
     font-weight: normal;
     color: #4A96ED;
     margin: 0
+  }
+  .active{
+    background-color: #4A96ED;
+    color: white !important;
   }
   .data{
     width: 1140px;
@@ -94,19 +107,19 @@ export default {
       .card{
         flex: 1;
         margin-left: 8px;
-        select{
-          width: 200px;
-          height: 30px;
-          font-size: 14px;
-          color: #101010;
-          padding-left: 10px;
-          border: 1px solid #bbb;
-          border-radius: 5px;
-          margin: 10px 20px 0;
-          option{
-            color: #101010;
-          }
-        }
+        /*select{*/
+          /*width: 200px;*/
+          /*height: 30px;*/
+          /*font-size: 14px;*/
+          /*color: #101010;*/
+          /*padding-left: 10px;*/
+          /*border: 1px solid #bbb;*/
+          /*border-radius: 5px;*/
+          /*margin: 10px 20px 0;*/
+          /*option{*/
+            /*color: #101010;*/
+          /*}*/
+        /*}*/
       }
     }
   }

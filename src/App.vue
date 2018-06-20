@@ -90,7 +90,6 @@
           align-items: center;
           height: 100%;
           width: 84px;
-
           a{
             color: #fff;
           }
