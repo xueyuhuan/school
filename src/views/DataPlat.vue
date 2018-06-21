@@ -11,7 +11,7 @@
     </card>
     <div class="table">
       <ul class="nav">
-        <li v-for="(item,index) in dataType" @click.stop="toggle(index)"><router-link ref="btn" :class="{active:index == current_index}" :to="item.route"><i :class="item.i_class"></i>{{item.name}}</router-link></li>
+        <li v-for="item in dataType" @click.stop="toggle(item.url)"><router-link :class="{active:item.url === current}" :to="item.url"><i :class="item.i_class"></i>{{item.name}}</router-link></li>
       </ul>
       <div class="card">
         <router-view></router-view>
@@ -30,18 +30,20 @@ export default {
   data(){
     return{
       dataType:[
-        {name:"基础数据",route:"/data/basicData", i_class:"fa fa-bar-chart"},
-        {name:"档案数据",route:"/data/filesData", i_class:"fa fa-pencil"},
-        {name:"资产数据",route:"/data/assetsData", i_class:"fa fa-desktop"},
-        {name:"校友数据",route:"/data/matesData", i_class:"fa fa-users"}
+        {name:"基础数据",url:"/data/basicData", i_class:"fa fa-bar-chart"},
+        {name:"档案数据",url:"/data/filesData", i_class:"fa fa-pencil"},
+        {name:"资产数据",url:"/data/assetsData", i_class:"fa fa-desktop"},
+        {name:"校友数据",url:"/data/matesData", i_class:"fa fa-users"}
       ],
-      current_index:0
+      current:""
     }
   },
+  mounted(){
+    this.current=this.$route.path;
+  },
   methods:{
-    toggle(index){
-      console.log(index);
-      this.current_index = index;
+    toggle(url){
+      this.current= url;
     }
   }
 };

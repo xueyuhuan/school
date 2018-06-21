@@ -16,38 +16,37 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "首页",
       component: Home
     },
     {
       path: "/app",
-      name: "app",
+      name: "应用市场",
       component: AppMarket
     },
     {
       path: "/data",
-      name: "data",
       component: DataPlat,
       children:[
-        {path:"/data/basicData", component:BasicData},
-        {path:"/data/filesData", component:FilesData},
-        {path:"/data/assetsData", component:AssetsData},
-        {path:"/data/matesData", component:MatesData}
+        {path:"/data/basicData",name:"基础数据", component:BasicData},
+        {path:"/data/filesData",name:"档案数据", component:FilesData},
+        {path:"/data/assetsData",name:"资产数据", component:AssetsData},
+        {path:"/data/matesData",name:"校友数据", component:MatesData}
       ]
     },
     {
       path: "/safety",
-      name: "safety",
+      name: "安全中心",
       component: SafetyCenter
     },
     {
       path: "/logistics",
-      name: "logistics",
+      name: "物联中心",
       component: LogisticalCenter
     },
     {
       path:"/maker",
-      name:"maker",
+      name:"创客中心",
       component:MakerCenter
     }
   ]

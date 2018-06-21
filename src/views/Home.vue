@@ -83,7 +83,7 @@ export default {
 
 <style scoped lang="less">
   .home{
-    max-width: 1140px;
+    width: 1140px;
     margin: 0 auto;
     img{
       width: 100%;

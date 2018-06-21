@@ -7,7 +7,7 @@
         </div>
         <div class="right">
           <ul>
-            <li v-for="(item,index) in array" @click="toggle(index)" :class="{active:index===active}"><router-link :to="item.url">{{item.name}}</router-link></li>
+            <li v-for="item in array" @click="toggle(item.url)" :class="{active:item.url===active}"><router-link :to="item.url">{{item.name}}</router-link></li>
           </ul>
           <span>名字<i class="fa fa-caret-down"></i></span>
         </div>
@@ -30,12 +30,16 @@
           {name:'物联中心',url:'/logistics'},
           {name:'创客中心',url:'/maker'},
         ],
-        active:0
+        active:''
       }
     },
+    mounted(){
+      console.log(this.$route);
+      this.active=this.$route.path;
+    },
     methods:{
-      toggle(i){
-        this.active=i;
+      toggle(url){
+        this.active=url;
       }
     }
   }
@@ -84,13 +88,15 @@
         height: 100%;
         margin-right: 90px;
         li{
-          display: flex;
           flex: none;
-          justify-content: center;
-          align-items: center;
           height: 100%;
           width: 84px;
           a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
             color: #fff;
           }
         }
