@@ -31,7 +31,7 @@ export default {
     return{
       dataType:[
         {name:"基础数据",route:"/data/basicData"},
-        {name:"教学数据",route:"/data/filesData"},
+        {name:"档案数据",route:"/data/filesData"},
         {name:"资产数据",route:"/data/assetsData"},
         {name:"校友数据",route:"/data/matesData"}
       ],
