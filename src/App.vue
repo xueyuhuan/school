@@ -7,7 +7,7 @@
         </div>
         <div class="right">
           <ul>
-            <li v-for="item in array" @click="toggle(item.url)" :class="{active:item.url===active}"><router-link :to="item.url">{{item.name}}</router-link></li>
+            <li v-for="item in array" @click="toggle(item.url)" :class="{active:item.url.substring(0,6)===active.substring(0,6)}"><router-link :to="item.url">{{item.name}}</router-link></li>
           </ul>
           <span>名字<i class="fa fa-caret-down"></i></span>
         </div>
