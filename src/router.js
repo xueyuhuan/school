@@ -7,8 +7,9 @@ import BasicData from "./components/BasicData.vue";//数据平台-基础数据
 import FilesData from "./components/FilesData.vue";//数据平台-档案数据
 import AssetsData from "./components/AssetsData.vue";//数据平台-资产数据
 import MatesData from "./components/MatesData.vue";//数据平台-校友数据
-import SafetyCenter from "./views/SafetyCenter"//安全中心
-import LogisticalCenter from "./views/LogisticalCenter"//物流中心
+import SafetyCenter from "./views/SafetyCenter";//安全中心
+import LogisticalCenter from "./views/LogisticalCenter";//物流中心
+import MakerCenter from "./views/MakerCenter";//创客中心
 Vue.use(Router);
 
 export default new Router({
@@ -43,6 +44,11 @@ export default new Router({
       path: "/logistics",
       name: "logistics",
       component: LogisticalCenter
+    },
+    {
+      path:"/maker",
+      name:"maker",
+      component:MakerCenter
     }
   ]
 });

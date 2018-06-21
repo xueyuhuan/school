@@ -117,7 +117,6 @@ export default {
     drawPie() {
       let pie = this.$echarts.init(document.getElementById('pie'));
       pie.setOption({
-
         tooltip : {
           trigger: 'item',
           formatter: "{a} <br/>{b} : {c} ({d}%)"

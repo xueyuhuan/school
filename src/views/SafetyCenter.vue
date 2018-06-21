@@ -32,18 +32,24 @@
           <option value="高二年级">高二年级</option>
           <option value="高三年级">高三年级</option>
         </select>
+        <img style="display:block;margin:0 auto 14px;width: 362px;height: 208px;" src="../assets/video.png"/>
       </card>
     </div>
     <card class="bottom">
       <h4 slot="header">学生轨迹</h4>
-      <div class="info">
-        <input placeholder="请输入学生姓名或学号"/><button>查询</button>
-        <div class="base">
-          <img src="../assets/head.png"/>
-          <p>学生姓名：张峰<br/>班级：高一（1）班<br/>班主任：李毅<br/>当前状态：在校</p>
+      <div class="content">
+        <div class="info">
+          <input placeholder="请输入学生姓名或学号"/><button>查询</button>
+          <div class="base">
+            <img src="../assets/head.png"/>
+            <p>学生姓名：张峰<br/>班级：高一（1）班<br/>班主任：李毅<br/>当前状态：在校</p>
+          </div>
+          <p>出生日期：2009年10月12日<br/>当前心率：110次/分<br/>当前位置：明德楼<br/>家长姓名：张曲<br/>家长联系方式：18987280823</p>
         </div>
-        <p>出生日期：2009年10月12日<br/>当前心率：110次/分<br/>当前位置：明德楼<br/>家长姓名：张曲<br/>家长联系方式：18987280823</p>
+        <img style="width: 558px;height: 366px;margin: 20px 40px 0 0" src="../assets/map.png"/>
       </div>
+
+
     </card>
   </div>
 </template>
@@ -140,6 +146,11 @@ export default {
     }
     .bottom{
       padding-bottom: 30px;
+      .content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
       .info{
         input{
           width: 235px;
