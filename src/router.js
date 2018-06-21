@@ -4,7 +4,7 @@ import Home from "./views/Home.vue";
 import AppMarket from "./views/AppMarket.vue";//应用市场
 import DataPlat from "./views/DataPlat.vue";//数据平台
 import BasicData from "./components/BasicData.vue";//数据平台-基础数据
-import TeachingData from "./components/TeachingData.vue";//数据平台-教学数据
+import FilesData from "./components/FilesData.vue";//数据平台-档案数据
 import AssetsData from "./components/AssetsData.vue";//数据平台-资产数据
 import MatesData from "./components/MatesData.vue";//数据平台-校友数据
 import SafetyCenter from "./views/SafetyCenter"//安全中心
@@ -29,7 +29,7 @@ export default new Router({
       component: DataPlat,
       children:[
         {path:"/data/basicData", component:BasicData},
-        {path:"/data/teachingData", component:TeachingData},
+        {path:"/data/filesData", component:FilesData},
         {path:"/data/assetsData", component:AssetsData},
         {path:"/data/matesData", component:MatesData}
       ]

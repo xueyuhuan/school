@@ -4,7 +4,7 @@
 
 <script type="text/ecmascript-6">
     export default {
-        name: "TeachingData",
+        name: "FilesData",
         components:{
 
         }
