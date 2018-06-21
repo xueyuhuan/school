@@ -4,14 +4,14 @@
       <h4 slot="header">总体概述</h4>
       <ul class="summary">
         <li style="background:#FF7567;"><i class="fa fa-windows"></i><span>建设模块：<br/>17个</span></li>
-        <li style="background:#F6B63C;"><i class="fa fa-windows"></i><span>总记录数：<br/>1743</span></li>
-        <li style="background:#35BBF6;"><i class="fa fa-windows"></i><span>总表数：<br/>14756</span></li>
-        <li style="background:#3CB8A0;"><i class="fa fa-windows"></i><span>已用空间：<br/>23M<br/>分配空间：<br/>14752M</span></li>
+        <li style="background:#F6B63C;"><i class="fa fa-database"></i><span>总记录数：<br/>1743</span></li>
+        <li style="background:#35BBF6;"><i class="fa fa-bars"></i><span>总表数：<br/>14756</span></li>
+        <li style="background:#3CB8A0;"><i class="fa fa-battery-half"></i><span>已用空间：<br/>23M<br/>分配空间：<br/>14752M</span></li>
       </ul>
     </card>
     <div class="table">
       <ul class="nav">
-        <li v-for="(item,index) in dataType" @click.stop="toggle(index)"><router-link ref="btn" :class="{active:index == current_index}" :to="item.route"><i class="fa fa-windows"></i>{{item.name}}</router-link></li>
+        <li v-for="(item,index) in dataType" @click.stop="toggle(index)"><router-link ref="btn" :class="{active:index == current_index}" :to="item.route"><i :class="item.i_class"></i>{{item.name}}</router-link></li>
       </ul>
       <div class="card">
         <router-view></router-view>
@@ -30,10 +30,10 @@ export default {
   data(){
     return{
       dataType:[
-        {name:"基础数据",route:"/data/basicData"},
-        {name:"档案数据",route:"/data/filesData"},
-        {name:"资产数据",route:"/data/assetsData"},
-        {name:"校友数据",route:"/data/matesData"}
+        {name:"基础数据",route:"/data/basicData", i_class:"fa fa-bar-chart"},
+        {name:"档案数据",route:"/data/filesData", i_class:"fa fa-pencil"},
+        {name:"资产数据",route:"/data/assetsData", i_class:"fa fa-desktop"},
+        {name:"校友数据",route:"/data/matesData", i_class:"fa fa-users"}
       ],
       current_index:0
     }

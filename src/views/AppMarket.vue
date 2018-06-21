@@ -34,17 +34,17 @@
         <card>
           <h4 slot="header">应用分类</h4>
           <ul class="classify">
-            <li><a><i class="fa fa-bookmark-o"></i>协同办公（9）</a></li>
-            <li><a><i class="fa fa-bookmark-o"></i>资产管理（2）</a></li>
-            <li><a><i class="fa fa-bookmark-o"></i>教师发展（5）</a></li>
-            <li><a><i class="fa fa-bookmark-o"></i>学生成长（9）</a></li>
+            <li><a><i class="fa fa-phone" style="color:#FF9800;"></i>协同办公（9）</a></li>
+            <li><a><i class="fa fa-wrench" style="color:#4F8AD0;"></i>资产管理（2）</a></li>
+            <li><a><i class="fa fa-pencil" style="color:#009688;"></i>教师发展（5）</a></li>
+            <li><a><i class="fa fa-users" style="color:#E35F14;"></i>学生成长（9）</a></li>
           </ul>
         </card>
         <card>
           <h4 slot="header">最新应用</h4>
           <ul class="newest">
-            <li><a><i class="fa fa-bookmark-o"></i>通知公告</a></li>
-            <li><a><i class="fa fa-bookmark-o"></i>故障报修</a></li>
+            <li><a><i class="fa fa-lemon-o" style="color:#FF9800;"></i>通知公告</a></li>
+            <li><a><i class="fa fa-bookmark-o" style="color:#009688;"></i>故障报修</a></li>
           </ul>
         </card>
       </div>
